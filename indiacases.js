@@ -15,5 +15,5 @@ var xmlhttp = new XMLHttpRequest();
     {
       var out = "";
       out=arr.cases_time_series[arr.cases_time_series.length-1].totalconfirmed;
-      document.getElementById("id01").innerHTML +='<h2 style="margin: auto;text-shadow: 2px 2px 4px #000000;"><u>Total Cases in India - '+ out +'</h2></u>';
+      document.getElementById("id01").innerHTML +='<h1 style="margin: auto;text-shadow: 2px 2px 4px #000000;"><u>Total Cases in India -<span style="color: red;"> '+ out +'</span></h1></u>';
     }
