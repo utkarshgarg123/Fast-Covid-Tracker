@@ -50,12 +50,9 @@
         var ttt=newarr.districtsDaily;
     var kp=ttt[selected_state][selected_district].length-1;
     var out=ttt[selected_state][selected_district];
-    document.getElementById("lpp").innerHTML ='<h3 style="color:white"> Total Confirmed cases in '+ selected_district+' - '+ out[kp].confirmed +'</h3> </pre>';
-    document.getElementById("lpp").innerHTML +='<h3 style="color:white"> Active cases - '+ out[kp].active +'</h3> </pre>';
-    document.getElementById("lpp").innerHTML +='<h3 style="color:white"> Last updated on - '+ out[kp].date +'</h3> </pre>';
+    document.getElementById("lpp").innerHTML ='<h2 style="color:white"> Total Confirmed cases in '+ selected_district+' - <span style="color: rgb(132, 189, 116);">'+ out[kp].confirmed +'</h2></span> </pre>';
+    document.getElementById("lpp").innerHTML +='<h2 style="color:white"> Active cases - <span style="color: red;">'+ out[kp].active +'</h2></span> </pre>';
+    document.getElementById("lpp").innerHTML +='<h2 style="color:white"> Last updated on : '+ out[kp].date +'</h2> </pre>';
      fcc();
 }}
-    }
-// function fn1(){
-
-    // }
+}
