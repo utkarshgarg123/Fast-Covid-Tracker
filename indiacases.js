@@ -14,6 +14,8 @@ var xmlhttp = new XMLHttpRequest();
     function myFunction(arr) 
     {
       var out = "";
+      var out1 = "";
       out=arr.cases_time_series[arr.cases_time_series.length-1].totalconfirmed;
-      document.getElementById("id01").innerHTML +='<h1 style="margin: auto;text-shadow: 2px 2px 4px #000000;"><u>Total Cases in India -<span style="color: red;"> '+ out +'</span></h1></u>';
+      out1=arr.cases_time_series[arr.cases_time_series.length-1].dailyconfirmed;
+      document.getElementById("id01").innerHTML +='<h1 style="margin: auto;text-shadow: 1px 1px 2px #000000;"><u>Total Cases in India</u> -<span style="color: red;"> '+ out + '</span><div style="display:inline"> ( <i class="fa fa-long-arrow-up"></i><span style="color: red;"> '+out1+'</span>)</div></h1>';
     }
