@@ -1,4 +1,4 @@
- var xmlhttp = new XMLHttpRequest();
+var xmlhttp = new XMLHttpRequest();
     var url = "https://api.covid19india.org/districts_daily.json";
     
     xmlhttp.onreadystatechange = function() {
@@ -50,9 +50,9 @@
         var ttt=newarr.districtsDaily;
     var kp=ttt[selected_state][selected_district].length-1;
     var out=ttt[selected_state][selected_district];
-    document.getElementById("lpp").innerHTML ='<h2 style="color:white"> Total Confirmed cases in '+ selected_district+' - <span style="color: rgb(132, 189, 116);">'+ out[kp].confirmed +'</h2></span> </pre>';
-    document.getElementById("lpp").innerHTML +='<h2 style="color:white"> Active cases - <span style="color: red;">'+ out[kp].active +'</h2></span> </pre>';
-    document.getElementById("lpp").innerHTML +='<h2 style="color:white"> Last updated on : '+ out[kp].date +'</h2> </pre>';
+    document.getElementById("lpp").innerHTML ='<h2> Total Confirmed cases in '+ selected_district+' - <span style="color: rgb(132, 189, 116);">'+ out[kp].confirmed +'</h2></span> </pre>';
+    document.getElementById("lpp").innerHTML +='<h2 > Active cases - <span style="color: red;">'+ out[kp].active +'</h2></span> </pre>';
+    document.getElementById("lpp").innerHTML +='<h2> Last updated on :  <span style="color: rgb(51, 89, 138);">'+ out[kp].date +'</span></h2> </pre>';
      fcc();
 }}
 }
