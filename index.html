@@ -1,38 +1,123 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            Coronavirus Statistics
-        </title>
-        <link rel="shortcut icon" type="image/png" href="virus_icon.png">
-        <link rel="stylesheet" href="mystyle.css">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <nav id="kk" style="margin: 0;">
-            <a href="index.html" ><img src="homenew.png" style="margin: auto; width: 23.5px; color: white;"></a>
-            <a href="utk.html" class="active">CASES</a>
-            <a style="float: right;" href="about.html">About Me</a></li>
-        </nav>
-      <div class="finali" id="final" style="margin-top: 50px; border: 3px solid #f1f1f1;box-shadow:3px 3px 9px 3px #000000;  text-shadow:3px 3px 9px #000000;  padding: 7px; text-align : center; margin-left: auto; margin-right: auto; border-radius: 1%; width: 60%;height:auto;margin-bottom:5%;">
-        <div id="id01" style="color: white; margin: auto; height: auto;">
+
+<head>
+  <title>
+    Bootstrap
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="tcb.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="districtwise.js"></script>
+  <script src="indiacases.js"></script>
+</head>
+
+<body>
+  
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="homepage.html"><img src="tcb.png" width="50"></a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarsExample04">
+      <ul class="navbar-nav mr-auto">
         
-        </div>
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Covid-19 Tracker</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="https://www.facebook.com/utkarsh.garg2001">
+            <i class="fab fa-facebook"></i> Facebook</a> <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="https://www.instagram.com/__utkarshgarg__/">
+            <i class="fab fa-instagram"></i> Instagram</a> <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="">
+            <i class="fas fa-envelope"></i> Mail</a> <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">About Me <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div>
+    <div class="finali jumbotron" id="final">
+      <blockquote class="blockquote">
+      <div id="id01" style="color: white; margin: auto; height: auto;"></div>
+      <br><footer class="blockquote-footer">From <abbr title="Ministry of Health and Family Welfare"><a href="https://www.mohfw.gov.in/">Mohfw</a></abbr>'s Website</footer>
+    </blockquote>
+      <!-- <span class="badge badge-pill badge-info">Info</span>  -->
+      <hr>
+        <form name="myform" id="myForm">
+        <h2>Select State:</h1> <pre ></pre><select name="countrya"  style="transition: all 2.5s ease;margin: auto;"  id="stateSel" size="1">
+        <option value="" selected="selected">Select State</option>
+        </select>
         <br>
-          <form name="myform" id="myForm">
-          <h2><span style="color: rgb(1, 7, 1);">Select State:</span></h2> <pre ></pre><select name="countrya"  style="transition: all 2.5s ease;margin: auto;"  id="stateSel" size="1">
-          <option value="" selected="selected" style="font-size: x-large; margin: auto;">Select State</option>
-          </select>
-          <br>
-          <br>
-          <h2><span style="color: rgb(1, 7, 1);">Select District:</span></h2> <pre ></pre>  <select name="district" style="transition: all 2.5s ease;" id="districtSel" size="1">
-          <option value="" selected="selected" id="lo">Please select State first</option>
-          </select>
-          </form>
-          <br><br>
-          <div id="lpp" style="box-shadow: 3px 3px 9px 3px black;margin: auto;"></div>
+        <br>
+        <h2>Select District:</h2> <pre ></pre>  <select name="district" style="transition: all 2.5s ease;" id="districtSel" size="1">
+        <option value="" selected="selected" id="lo">Please select State first</option>
+        </select>
+        </form>
+        <br><br>
+        <div style="box-shadow: 1px 1px 9px black;" class="alert alert-danger alert-dismissible fade show" id="lpp" >
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h5">Select state and District</h5></div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+
+  <!-- Footer Elements -->
+  <div class="container text-center">
+
+    <!-- Grid row-->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 py-5">
+        <div class="mb-5 flex-center">
+
+          <!-- Facebook -->
+          <a class="fb-ic" href="https://www.facebook.com/utkarsh.garg2001">
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic" href="utkarsh.garg2001@gmail.com">
+            <i class="fas fa-envelope fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic" href="https://www.linkedin.com/in/utkarsh-garg-5403b4109/">
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic" href="https://www.instagram.com/__utkarshgarg__/">
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <a class="git-ic" href="https://github.com/utkarshgarg123">
+            <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
         </div>
       </div>
-      <script src="districtwise.js"></script>
-    <script src="indiacases.js"></script>
-    </body>
+    </div>
+  </div>
+  <div class="footer-copyright text-center">Created with <i class="far fa-heart fa-lg white-text mr-md- mr-1 ml-1 fa-1x"> </i>
+    <a> by Utkarsh Garg</a>
+  </div>
+</footer>
+</body>
+
 </html>
